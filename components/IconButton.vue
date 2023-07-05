@@ -12,8 +12,8 @@ const setColorTheme = (newTheme: Theme) => {
 <template>
     <button 
         @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')" 
-        class="bg-[#333333] border border-[#353535] p-2 rounded-lg hover:border-[#464646]">
-        <Moon v-if="$colorMode.preference === 'light'" color="#898989" :size="20" />
+        class="bg-slate-200 dark:bg-[#333333] border border-slate-100 dark:border-[#353535] p-2 rounded-lg hover:border-slate-200 dark:hover:border-[#464646]">
+        <Moon v-if="$colorMode.preference === 'light'" color="#64748b" :size="20" />
         <Sun v-if="$colorMode.preference === 'dark'" color="#898989" :size="20" />
     </button>
 </template>

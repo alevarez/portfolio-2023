@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
+    preference: 'dark'
   },
   app: {
     head: {
