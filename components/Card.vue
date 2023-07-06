@@ -15,7 +15,7 @@ const {
 
 </script>
 <template>
-    <div class="w-full p-4 sm:p-7 bg-zinc-200 dark:bg-[#323232] rounded-lg border border-zinc-100 dark:border-[#3D3D3D] hover:border-zinc-300 dark:hover:border-[#474747] transition">
+    <div class="w-full p-4 sm:p-7 bg-zinc-100 dark:bg-[#323232] rounded-lg border border-zinc-50 dark:border-[#3D3D3D] hover:border-zinc-200 dark:hover:border-[#474747] transition">
         <div class="w-full flex justify-between flex-wrap">
             <div>
                 <Github v-if="iconMain === 'github'" class="text-zinc-800 dark:text-[#F2F2F2] scale-75 md:scale-100" :size="48" />

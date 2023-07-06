@@ -8,7 +8,7 @@ const {title} = item
 </script>
 
 <template>
-    <div class="w-full p-4 md:p-5 flex items-center justify-between flex-wrap gap-3 bg-zinc-200 dark:bg-[#323232] rounded-lg border border-zinc-100 dark:border-[#3D3D3D] hover:border-zinc-300 dark:hover:border-[#474747] cursor-pointer transition">
+    <div class="w-full p-4 md:p-5 flex items-center justify-between flex-wrap gap-3 bg-zinc-100 dark:bg-[#323232] rounded-lg border border-zinc-50 dark:border-[#3D3D3D] hover:border-zinc-200 dark:hover:border-[#474747] cursor-pointer transition">
         <div class="flex items-center gap-4">
             <div class="bg-[#4F5CD3] p-1 md:p-3 rounded-md">
                 <ThumbsUp color="#F2F2F2" :size="26" class="scale-75 md:scale-100" />
