@@ -12,7 +12,7 @@ const setColorTheme = (newTheme: Theme) => {
 <template>
     <button 
         @click="setColorTheme($colorMode.preference === 'dark' ? 'light' : 'dark')" 
-        class="bg-zinc-200 dark:bg-[#333333] border border-zinc-100 dark:border-[#353535] p-2 rounded-lg hover:border-zinc-300 dark:hover:border-[#464646]">
+        class="bg-zinc-100 dark:bg-[#333333] border border-zinc-50 dark:border-[#353535] p-2 rounded-lg hover:border-zinc-200 dark:hover:border-[#464646]">
         <Moon v-if="$colorMode.preference === 'light'" class="text-zinc-600" :size="20" />
         <Sun v-if="$colorMode.preference === 'dark'" color="#898989" :size="20" />
     </button>
