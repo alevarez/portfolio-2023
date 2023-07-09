@@ -5,10 +5,15 @@ import {MentorCard} from "@/data/cardData"
 const {item} = defineProps<{item: MentorCard}>()
 const {title} = item
 
+const showSoon = ref(false)
+
 </script>
 
 <template>
-    <div class="w-full p-4 md:p-5 flex items-center justify-between flex-wrap gap-3 bg-zinc-100 dark:bg-[#323232] rounded-lg border border-zinc-50 dark:border-[#3D3D3D] hover:border-zinc-200 dark:hover:border-[#474747] cursor-pointer transition">
+    <div @mouseover="showSoon = true" @mouseleave="showSoon = false" class="relative w-full p-4 md:p-5 flex items-center justify-between flex-wrap gap-3 bg-zinc-100 dark:bg-[#323232] rounded-lg border border-zinc-50 dark:border-[#3D3D3D] hover:border-zinc-200 dark:hover:border-[#474747] cursor-pointer hover:cursor-not-allowed transition">
+        <Transition>
+            <div v-if="showSoon" class="absolute inset-0 bg-zinc-100/95 dark:bg-zinc-800/95 rounded-md z-40 flex items-center justify-center text-[#4F5CD3] text-2xl font-bold">SOON</div>
+        </Transition>
         <div class="flex items-center gap-4">
             <div class="bg-[#4F5CD3] p-1 md:p-3 rounded-md">
                 <ThumbsUp color="#F2F2F2" :size="26" class="scale-75 md:scale-100" />
@@ -21,3 +26,15 @@ const {title} = item
         </div>
     </div>
 </template>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
